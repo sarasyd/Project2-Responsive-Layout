@@ -1,0 +1,302 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    color: #3a3a3a;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+p {
+    font-size: .95rem;
+}
+
+h2, h3, a {
+    color: #3a3a3a;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 90%;
+    margin: 1.5rem 0;
+    border-radius: 3px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.name {
+    margin: 0;
+}
+
+.main-header {
+    padding: 2rem;
+    line-height: 2;
+    ;
+}
+
+.nav {
+    margin: 1rem auto;
+    justify-items: center;
+    max-width: 90%;
+}
+
+.name a {
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+.nav a {
+    padding: 10px;
+    margin: 0.5rem;
+}
+
+.nav, .footer {
+    font-size: .95rem;
+}
+
+.banner {
+    margin: 0 0 1.5rem;
+}
+
+.banner p, footer p {
+    color: gray;
+    padding: 0 1rem;
+}
+
+.main-header, .banner, .main-footer {
+    width: 100%;
+    padding: 1rem .5rem;
+    background-color: rgb(245, 241, 241);
+}
+
+#protfolio {
+    margin: 3rem 2rem 0;
+}
+
+.main-container, .container {
+    margin: 1rem;
+}
+
+.main-container p, .footer-container p {
+    padding: 0;
+    margin: auto;
+}
+
+.main-footer {
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    margin: 4rem 0;
+}
+
+.footer-container p {
+    max-width: 55%;
+    margin: 1rem auto;
+    ;
+}
+
+.footer-container .email {
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+}
+
+#footer-name a {
+    font-size: 1.5rem;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    border-top: 1px #e2e1e1 solid;
+}
+
+.hide {
+    display: none;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (min-width:320px) {
+    .name a, .nav a {
+        text-align: center;
+        display: block;
+        font-weight: 700;
+    }
+    .nav li {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #footer-name a {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html {
+        font-size: 1.25rem;
+    }
+    h1, h2 {
+        display: block;
+    }
+    h2, .nav {
+        font-size: 1rem;
+    }
+    .nav {
+        display: block;
+    }
+    .banner {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto 1rem;
+    }
+    .main-container, .footer-container {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    .main-container, .nav {
+        display: inline-flex;
+        flex-direction: row;
+        flex: 1;
+        margin: auto;
+    }
+    .main-container {
+        flex-wrap: wrap;
+    }
+    .container {
+        max-width: 44%;
+    }
+    .nav li {
+        background-color: rgb(245, 241, 241);
+    }
+    .name {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .intro {
+        flex: 50%;
+        flex: 1;
+        margin: 0 auto;
+    }
+    .banner p, .banner img {
+        max-width: 50%;
+        text-align: left;
+    }
+    .banner p {
+        order: -1;
+    }
+    .hide {
+        display: flex;
+        margin: 0 1rem;
+    }
+    .backtop {
+        display: none;
+    }
+    #footer-name {
+        flex-grow: 1;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    html {
+        background-color: rgb(245, 241, 241);
+        max-width: 1200px;
+        margin: auto;
+        font-size: 1.25rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    #footer-name {
+        font-size: 1.5rem;
+    }
+    body {
+        max-width: 90vw;
+        margin: auto;
+    }
+    .header-container, .main-container {
+        display: flex;
+    }
+    .header-container, .main-container, #protfolio {
+        flex-direction: row;
+        margin: 1rem auto 0;
+    }
+    #protfolio {
+        line-height: 6;
+        width: 90vw;
+        max-width: 1200px;
+    }
+    .main-container, #protfolio {
+        background-color: white;
+    }
+    .main-container {
+        margin: -1rem auto 2rem;
+    }
+    .name {
+        padding: 0 1rem;
+        flex-grow: 1;
+    }
+    .name a {
+        text-align: left;
+    }
+    .main-container {
+        flex-wrap: wrap;
+    }
+    .container {
+        margin: 1rem auto 2rem;
+        max-width: 28%;
+    }
+    .container p {
+        padding: 0 1rem 1rem;
+        margin: .5rem;
+    }
+    footer {
+        margin: auto;
+        line-height: 2;
+    }
+    footer p {
+        max-width: 50%;
+    }
+}
