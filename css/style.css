@@ -8,10 +8,11 @@
 
 html {
     min-height: 100vh;
+    min-width: 320px
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,6 +71,17 @@ img {
     justify-items: center;
     max-width: 90%;
 }
+.name a, .nav a {
+    text-align: center;
+    display: block;
+    font-weight: 700;
+}
+.nav li {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
 .name a {
     padding: 10px 0;
@@ -122,18 +134,12 @@ img {
 }
 
 .footer-container p {
-    max-width: 55%;
     margin: 1rem auto;
-    ;
 }
 
 .footer-container .email {
     padding-top: 0;
     padding-bottom: 1.5rem;
-}
-
-#footer-name a {
-    font-size: 1.5rem;
 }
 
 .footer-inner {
@@ -143,7 +149,11 @@ img {
     padding: 1.5rem 1rem;
     border-top: 1px #e2e1e1 solid;
 }
-
+#footer-name a{
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1.25rem;
+}
 .hide {
     display: none;
 }
@@ -151,23 +161,6 @@ img {
 /* ================================= 
   Media Queries
 ==================================== */
-
-@media screen and (min-width:320px) {
-    .name a, .nav a {
-        text-align: center;
-        display: block;
-        font-weight: 700;
-    }
-    .nav li {
-        background-color: white;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    #footer-name a {
-        font-size: 1.25rem;
-    }
-}
 
 @media screen and (min-width:768px) {
     html {
@@ -234,6 +227,9 @@ img {
         flex-grow: 1;
         text-align: left;
     }
+    .footer-container p {
+        margin: 1rem auto;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -241,16 +237,12 @@ img {
         background-color: rgb(245, 241, 241);
         max-width: 1200px;
         margin: auto;
-        font-size: 1.25rem;
     }
     .name {
         font-size: 2rem;
     }
     h2 {
         font-size: 1.25rem;
-    }
-    #footer-name {
-        font-size: 1.5rem;
     }
     body {
         max-width: 90vw;
@@ -274,11 +266,10 @@ img {
     .main-container {
         margin: -1rem auto 2rem;
     }
-    .name {
+  
+    .name, #footer-name {
         padding: 0 1rem;
         flex-grow: 1;
-    }
-    .name a {
         text-align: left;
     }
     .main-container {
